@@ -1,0 +1,77 @@
+.searchBar {
+  width: 80%;
+  margin:  auto;
+  padding-top: 3rem;
+  height: 18vh;
+}
+.searchResults {
+    overflow-y: scroll;
+    height: 82vh;
+}
+.listHolder {
+    border-radius: 10px;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    height: 6rem;
+    background-color: #718096;
+    justify-content: space-between;
+}
+.title {
+    text-align: center;
+}
+.imgHolder {
+    min-width: 10.67rem;
+    max-width: 10.67rem;
+}
+.imgHolder > img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.playBtnHolder {
+    width: 10rem;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videoHidden {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .listHolder {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 2rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 
+        "one one two two two"
+        "one one three three three"
+        ;
+    }
+    .listHolder > .imgHolder {grid-area: one;}
+    .listHolder > .title {grid-area: two; overflow: hidden;}
+    .listHolder > .playBtnHolder {grid-area: three;}
+}
+
+
+/*      from chakra        */
+.chakra-input__right-element {
+    cursor:pointer;
+    border-radius: 10px;
+}
+.chakra-stack {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.chakra-stack > .chakra-skeleton{
+    margin-bottom: 2rem;
+}
